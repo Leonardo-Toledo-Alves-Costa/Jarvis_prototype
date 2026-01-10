@@ -1,14 +1,16 @@
-from utilities import falar, decidir_acao
+from utilities import falar, decidir_acao, ouvir_mic
 
 
 def main():
     print("Iniciando projeto Jarvis...")
     falar("Projeto Jarvis online e funcional!")
-    rodando = True
 
+    rodando = True
     while rodando:
-        entrada = input("Digite o comando: ").lower()
-        rodando = decidir_acao(entrada)
+        entrada = ouvir_mic()
+
+        if entrada:
+            rodando = decidir_acao(entrada)
 
 if __name__ == "__main__":
     main()
