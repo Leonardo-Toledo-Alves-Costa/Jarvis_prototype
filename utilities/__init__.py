@@ -1,0 +1,1 @@
+from .jarvis_logic import falar, decidir_acao
